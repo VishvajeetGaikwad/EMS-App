@@ -11,7 +11,7 @@ const ViewAllTasks = () => {
       try {
         const token = localStorage.getItem("token");
         const res = await axios.get(
-          "https://ems-app-xwgf.onrender.com/api/tasks/all-tasks",
+          "http://localhost:5000/api/tasks/all-tasks",
           {
             headers: { "x-auth-token": token },
           }

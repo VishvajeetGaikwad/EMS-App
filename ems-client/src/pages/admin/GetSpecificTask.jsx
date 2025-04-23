@@ -41,7 +41,7 @@ const GetSpecificTask = () => {
         }
 
         res = await axios.get(
-          `https://ems-app-xwgf.onrender.comapi/tasks/employee/${searchValue}/tasks`,
+          `http://localhost:5000api/tasks/employee/${searchValue}/tasks`,
           {
             headers: { "x-auth-token": token },
           }
@@ -49,7 +49,7 @@ const GetSpecificTask = () => {
         setTaskData(res.data);
       } else {
         res = await axios.get(
-          `https://ems-app-xwgf.onrender.com/api/tasks/search-by-name?name=${encodeURIComponent(
+          `http://localhost:5000/api/tasks/search-by-name?name=${encodeURIComponent(
             searchValue
           )}`,
           {

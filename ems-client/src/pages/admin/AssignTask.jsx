@@ -36,7 +36,7 @@ const AssignTask = () => {
     try {
       // Send POST request with task data and authorization token
       const res = await axios.post(
-        "https://ems-app-xwgf.onrender.com/api/tasks/assign",
+        "http://localhost:5000/api/tasks/assign",
         taskData,
         {
           headers: {
