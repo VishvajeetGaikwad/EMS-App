@@ -13,7 +13,7 @@ const GetAllEmployees = () => {
         const token = localStorage.getItem("token");
 
         const response = await axios.get(
-          "http://localhost:5000/api/employees",
+          "https://ems-app-xwgf.onrender.com/api/employees",
           {
             headers: {
               "x-auth-token": token,

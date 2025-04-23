@@ -36,11 +36,15 @@ const AddEmployee = () => {
         return;
       }
 
-      await axios.post("http://localhost:5000/api/employees", employeeData, {
-        headers: {
-          "x-auth-token": token,
-        },
-      });
+      await axios.post(
+        "https://ems-app-xwgf.onrender.com/api/employees",
+        employeeData,
+        {
+          headers: {
+            "x-auth-token": token,
+          },
+        }
+      );
 
       toast.success("🎉 Employee added successfully!");
     } catch (error) {

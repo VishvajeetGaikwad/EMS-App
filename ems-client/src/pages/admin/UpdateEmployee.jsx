@@ -23,7 +23,7 @@ const UpdateEmployee = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.get(
-        `http://localhost:5000/api/employees/${id}`,
+        `https://ems-app-xwgf.onrender.com/api/employees/${id}`,
         {
           headers: {
             "x-auth-token": token,
@@ -56,7 +56,7 @@ const UpdateEmployee = () => {
     try {
       const token = localStorage.getItem("token");
       await axios.put(
-        `http://localhost:5000/api/employees/${employeeId}`,
+        `https://ems-app-xwgf.onrender.com/api/employees/${employeeId}`,
         employeeData,
         {
           headers: {

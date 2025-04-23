@@ -19,9 +19,12 @@ const UpdateTaskStatus = () => {
     setError("");
     try {
       const token = localStorage.getItem("token");
-      const res = await axios.get("http://localhost:5000/api/tasks/all-tasks", {
-        headers: { "x-auth-token": token },
-      });
+      const res = await axios.get(
+        "https://ems-app-xwgf.onrender.com/api/tasks/all-tasks",
+        {
+          headers: { "x-auth-token": token },
+        }
+      );
       setTasks(res.data);
     } catch (err) {
       console.error(err);
@@ -51,7 +54,7 @@ const UpdateTaskStatus = () => {
       const token = localStorage.getItem("token");
 
       await axios.patch(
-        `http://localhost:5000/api/tasks/${taskId}/status`,
+        `https://ems-app-xwgf.onrender.com/api/tasks/${taskId}/status`,
         { status: updatedStatus },
         { headers: { "x-auth-token": token } }
       );
