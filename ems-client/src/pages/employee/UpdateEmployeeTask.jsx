@@ -16,7 +16,7 @@ const UpdateEmployeeTask = () => {
       try {
         const token = localStorage.getItem("token");
         const response = await axios.get(
-          "http://localhost:5000/api/tasks/my-tasks",
+          "https://ems-app-pcl7.onrender.com/api/tasks/my-tasks",
           {
             headers: { "x-auth-token": token },
           }
@@ -52,7 +52,7 @@ const UpdateEmployeeTask = () => {
     try {
       const token = localStorage.getItem("token");
       await axios.patch(
-        `http://localhost:5000/api/tasks/${selectedTaskId}/status`,
+        `https://ems-app-pcl7.onrender.com/api/tasks/${selectedTaskId}/status`,
         { status },
         {
           headers: { "x-auth-token": token },

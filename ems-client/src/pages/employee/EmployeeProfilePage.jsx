@@ -10,7 +10,7 @@ const EmployeeProfile = () => {
       try {
         const token = localStorage.getItem("token");
         const response = await axios.get(
-          "http://localhost:5000/api/employees/me",
+          "https://ems-app-pcl7.onrender.com/api/employees/me",
           {
             headers: {
               "x-auth-token": token,

@@ -19,7 +19,7 @@ const DeleteEmployee = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.get(
-        `http://localhost:5000/api/employees/${id}`,
+        `https://ems-app-pcl7.onrender.com/api/employees/${id}`,
         {
           headers: {
             "x-auth-token": token,
@@ -46,11 +46,14 @@ const DeleteEmployee = () => {
 
     try {
       const token = localStorage.getItem("token");
-      await axios.delete(`http://localhost:5000/api/employees/${employeeId}`, {
-        headers: {
-          "x-auth-token": token,
-        },
-      });
+      await axios.delete(
+        `https://ems-app-pcl7.onrender.com/api/employees/${employeeId}`,
+        {
+          headers: {
+            "x-auth-token": token,
+          },
+        }
+      );
       toast.success("✅ Employee deleted successfully!");
       setEmployeeData({
         name: "",

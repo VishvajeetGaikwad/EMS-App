@@ -36,7 +36,7 @@ const AddEmployee = () => {
         return;
       }
 
-      await axios.post("http://localhost:5000/api/employees", employeeData, {
+      await axios.post("https://ems-app-pcl7.onrender.com/api/employees", employeeData, {
         headers: {
           "x-auth-token": token,
         },
